@@ -597,6 +597,12 @@ public class DataPageIO extends PageIO {
         return -1;
     }
 
+    public long removeRowTmp(long pageAddr, int itemId, int pageSize) throws IgniteCheckedException {
+        setEmptyPage(pageAddr, pageSize);
+
+        return 0;
+    }
+
     /**
      * @param pageAddr Page address.
      * @param itemId Fixed item ID (the index used for referencing an entry from the outside).
